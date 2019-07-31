@@ -2,7 +2,7 @@ const test = require('tape');
 const supertest = require('supertest');
 const router = require('../src/router');
 
-test('initialise', (t) =>{
+test('initialise', (t) => {
   let number = 2;
   t.equal(number , 2 , 'Should return 2');
   t.end();
@@ -15,7 +15,19 @@ test('status code is 200', (t) => {
   .expect('Content-type', /html/)
   .end((err, res) => {
     t.error(err);
-    t.equal(res.statusCode, 200, 'should return 200')
+    t.equal(res.statusCode, 200, 'should return 200');
     t.end();
   })
 });
+
+test('status code is 404', (t) => {
+  supertest(router)
+  .get('/anyrandomendpoint')
+  .expect(404)
+  .expect('Content-type', /html/)
+  .end((err, res) => {
+    t.error(err);
+    t.equal(res.statusCode, 404, 'Oh drag! 404 not found.');
+    t.end();
+  })
+})
