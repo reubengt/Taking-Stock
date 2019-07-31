@@ -1,0 +1,23 @@
+{
+  "name": "week5-chin-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac-17/week5-chin-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac-17/week5-chin-project/issues"
+  },
+  "homepage": "https://github.com/fac-17/week5-chin-project#readme",
+  "devDependencies": {
+    "eslint": "^6.1.0"
+  }
+}
