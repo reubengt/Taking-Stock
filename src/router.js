@@ -6,6 +6,9 @@ const router = (request, response) => {
   if(endpoint === '/'){
     handlers.handleHome(request, response)
   }
+  else {
+    handlers.handleError(request, response)
+  }
 }
 
 
