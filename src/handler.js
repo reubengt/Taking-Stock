@@ -17,7 +17,9 @@ const handleHome = (request, response) =>{
     }
     else{
       response.writeHead(200, {'content-type': 'text/html'});
-      response.end(file)
+      response.end(file);
     }
   })
 }
+
+module.exports = {handleHome}
