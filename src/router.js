@@ -5,11 +5,15 @@ const router = (request, response) => {
 
   if(endpoint === '/'){
     handlers.handleHome(request, response)
+  } else if (endpoint.startsWith('/public')) {
+    handlers.handlePublic(request, response)
   }
   else {
     handlers.handleError(request, response)
   }
 }
+
+
 
 
 module.exports = router;
