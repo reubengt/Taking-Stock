@@ -8,7 +8,7 @@ let extensions = {
   '.ico':"image/x-icon"
 }
 
-const handleHome = (request, response) =>{
+const handleHome = (request, response) => {
   const filepath = path.join(__dirname,'..','public','index.html');
   fs.readFile(filepath, (error, file) => {
     if(error){
@@ -22,4 +22,9 @@ const handleHome = (request, response) =>{
   })
 }
 
-module.exports = {handleHome}
+const handleError = (request, response) => {
+  response.writeHead(404, { 'content-type': 'text/html'});
+  response.end('Oh drag! What you are looking for does not appear to be here.')
+}
+
+module.exports = {handleHome, handleError}
