@@ -1,5 +1,7 @@
 let path = require("path");
 let fs = require("fs");
+let url = require("url");
+let myRequest=require('./request.js')
 
 const handleHome = (request, response) => {
   const filepath = path.join(__dirname,'..','public','index.html');
@@ -14,7 +16,7 @@ const handleHome = (request, response) => {
     }
   })
 }
- 
+
 const handlePublic = (request, response, endpoint) => {
   const extension = path.extname(endpoint)
   let extensionType = {
@@ -34,10 +36,28 @@ const handlePublic = (request, response, endpoint) => {
     }
   });
 }
+const handleSearch = (request, response, endpoint) => {
+  const urlObject= url.parse(endpoint, true);
+  // console.log('urlObject: ',urlObject);
+  console.log(urlObject.query);
+  const searchTerm = urlObject.query.q;
+  //object with different endpoints for different queries
+  const endpointObj={coffee:'CHRIS/ICE_KC1/data.json'}
+  const apiUrl=`https://www.quandl.com/api/v3/datasets/${endpointObj[searchTerm]}`
+  //call myRequest to make request and return response
+  myRequest(apiUrl, (err, res) => {
+    if(err)
+    console.log(err.message);
+    else {
+    response.writeHead(200, { 'content-type': 'application/json'});
+    response.end(res) ;
+    }
+  })
 
+  }
 const handleError = (request, response) => {
   response.writeHead(404, { 'content-type': 'text/html'});
   response.end('Oh drag! What you are looking for does not appear to be here.')
 }
 
-module.exports = {handleHome, handleError, handlePublic};
+module.exports = {handleHome, handlePublic, handleSearch, handleError };
