@@ -102,3 +102,79 @@ body {
       background-color: lightblue;
     }
   }
+
+.oats,
+.rice,
+.silver,
+.soybean,
+.sugar,
+.wheat,
+.cattle,
+.corn,
+.coffee,
+.cocoa,
+.copper,
+.cotton,
+.dairy,
+.gold {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.cattle {
+  background-image: url(images/Cattle-Image.jpg);
+}
+
+.coffee {
+  background-image: url(images/Coffee-Image.jpg);
+}
+
+.cocoa {
+  background-image: url(images/Cocoa-Image.jpg);
+}
+
+.copper {
+  background-image: url(images/Copper-Image.jpg);
+}
+
+.cotton {
+  background-image: url(images/Cotton-Image.jpg);
+}
+
+.corn {
+  background-image: url(images/Corn-Image.jpg);
+}
+
+.dairy {
+  background-image: url(images/Dairy-Image.jpg);
+}
+
+.gold {
+  background-image: url(images/Gold-Image.jpg);
+
+
+.oats {
+  background-image: url(images/Oats-Image..jpg);
+}
+
+.rice {
+  background-image: url(images/Rice-Image..jpg);
+}
+
+.silver {
+  background-image: url(images/Silver-Image..jpg);
+}
+
+.soybean {
+  background-image: url(images/Soybean-Image..jpg);
+}
+
+.sugar {
+  background-image: url(images/Sugar-Image..jpg);
+}
+
+.wheat {
+  background-image: url(images/Wheat-Image..jpg);
+}
