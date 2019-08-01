@@ -12,7 +12,6 @@ const myRequest = (url, cb) => {
     responseFromAPI.on('end', () => {
       let responseObj = {};
       responseObj.body=JSON.parse(body);
-      console.log(JSON.parse(body))
       responseObj.statusCode=statusCode;
       if(statusCode !== 200)
       {
@@ -26,4 +25,4 @@ const myRequest = (url, cb) => {
   })
 }
 
-module.exports=myRequest
+module.exports = myRequest;
