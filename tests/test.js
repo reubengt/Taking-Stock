@@ -33,9 +33,8 @@ test('is our css file working? - testing public routes ', (t) => {
 });
 
 test('is our front-end request receiving a valid response', (t) =>{
-  let yesterday = new Date(Date.now() - 86400000)
   supertest(router)
-  .get(`/search?q=coffee&d=${yesterday}`)
+  .get(`/search?q=coffee`)
   .expect(200)
   .expect('Content-type', /json/)
   .end((err,res) => {

@@ -4,6 +4,8 @@ const myRequest = (url, cb) => {
   http.get(url, (res) => {
     let statusCode = res.statusCode
     let body='';
+
+
     res.on('data', (chunk) => {
       body+=chunk;
     })
@@ -22,3 +24,5 @@ const myRequest = (url, cb) => {
     })
   })
 }
+
+module.exports=myRequest

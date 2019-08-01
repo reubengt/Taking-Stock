@@ -1,7 +1,8 @@
 let path = require("path");
 let fs = require("fs");
 let url = require("url");
-let querystring = require("querystring");
+let myRequest=require('./request.js')
+
 const handleHome = (request, response) => {
   const filepath = path.join(__dirname,'..','public','index.html');
   fs.readFile(filepath, (error, file) => {
@@ -40,7 +41,6 @@ const handleSearch = (request, response, endpoint) => {
   // console.log('urlObject: ',urlObject);
   console.log(urlObject.query);
   const searchTerm = urlObject.query.q;
-  const date = urlObject.query.d;
   //call myRequest to make request and return response
   myRequest("api.com", (err, response) => {
     if(err)
