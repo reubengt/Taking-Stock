@@ -1,22 +1,23 @@
-let searchButton = document.querySelector("search-button");
-let searchValue = document.querySelector("dropdown").value; //search query value taken from select dropdown
+let searchButton = document.querySelector(".search-button");
 
-///search?q=
-searchButton.addEventListener('click', query); //query function called on submit
 
 let xhr = new XMLHttpRequest();
+let response;
 
-const query = searchValue => {
+const query = e => {
+  let searchValue = document.querySelector(".dropdown").value; //search query value taken from select dropdown
   let queryUrl = `/search?q=${searchValue}`;
+  console.log(searchValue);
   xhr.onreadystatechange = () => {
     if(xhr.readyState === 4 && xhr.status === 200) {
-      let response = JSON.parse(xhr.responseText);
+     response = JSON.parse(xhr.responseText);
     } else {
       console.error(xhr.responseText);
     }
-    return response;
   }
   xhr.open("GET", queryUrl, true);
   xhr.send();
-  return response;
+
 };
+
+searchButton.addEventListener('click', query); //query function called on submit
