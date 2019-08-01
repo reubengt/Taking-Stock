@@ -8,7 +8,7 @@ test('initialise', (t) => {
   t.end();
 })
 
-test('status code is 200', (t) => {
+test('status code is 200 for home route', (t) => {
   supertest(router)
   .get('/')
   .expect(200)
@@ -20,19 +20,7 @@ test('status code is 200', (t) => {
   })
 });
 
-test('status code is 404', (t) => {
-  supertest(router)
-  .get('/anyrandomendpoint')
-  .expect(404)
-  .expect('Content-type', /html/)
-  .end((err, res) => {
-    t.error(err);
-    t.equal(res.statusCode, 404, 'Oh drag! 404 not found.');
-    t.end();
-  })
-});
-
-test('is our css file working?', (t) => {
+test('is our css file working? - testing public routes ', (t) => {
   supertest(router)
   .get('/public/style.css')
   .expect(200)
@@ -40,6 +28,30 @@ test('is our css file working?', (t) => {
   .end((err, res) => {
     t.error(err);
     t.equal(res.statusCode, 200);
+    t.end();
+  })
+});
+
+test('is our front-end request receiving a valid response', (t) =>{
+  let yesterday = new Date(Date.now() - 86400000)
+  supertest(router)
+  .get(`/search?q=coffee&d=${yesterday}`)
+  .expect(200)
+  .expect('Content-type', /json/)
+  .end((err,res) => {
+    t.error(err);
+    t.end();
+  });
+});
+
+test('status code is 404 for invalid route', (t) => {
+  supertest(router)
+  .get('/anyrandomendpoint')
+  .expect(404)
+  .expect('Content-type', /html/)
+  .end((err, res) => {
+    t.error(err);
+    t.equal(res.statusCode, 404, 'Oh drag! 404 not found.');
     t.end();
   })
 });

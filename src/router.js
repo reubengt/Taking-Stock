@@ -7,7 +7,10 @@ const router = (request, response) => {
     handlers.handleHome(request, response);
   } else if (endpoint.includes('public')) {
     handlers.handlePublic(request, response, endpoint);
-  } else {
+  } else if (endpoint.includes('search')) {
+    handlers.handleSearch(request, response, endpoint);
+  }
+   else {
     handlers.handleError(request, response);
   }
 };

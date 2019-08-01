@@ -1,6 +1,7 @@
 let path = require("path");
 let fs = require("fs");
-
+let url = require("url");
+let querystring = require("querystring");
 const handleHome = (request, response) => {
   const filepath = path.join(__dirname,'..','public','index.html');
   fs.readFile(filepath, (error, file) => {
@@ -14,7 +15,7 @@ const handleHome = (request, response) => {
     }
   })
 }
- 
+
 const handlePublic = (request, response, endpoint) => {
   const extension = path.extname(endpoint)
   let extensionType = {
@@ -34,10 +35,17 @@ const handlePublic = (request, response, endpoint) => {
     }
   });
 }
-
+const handleSearch = (request, response, endpoint) => {
+  const urlObject= url.parse(endpoint, true);
+  // console.log('urlObject: ',urlObject);
+  console.log(urlObject.query);
+  const searchTerm = urlObject.query.q;
+  const date = urlObject.query.d;
+  
+  }
 const handleError = (request, response) => {
   response.writeHead(404, { 'content-type': 'text/html'});
   response.end('Oh drag! What you are looking for does not appear to be here.')
 }
 
-module.exports = {handleHome, handleError, handlePublic};
+module.exports = {handleHome, handlePublic, handleSearch, handleError };
