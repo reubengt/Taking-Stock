@@ -5,12 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>CommodityCheck</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="public/style.css">
 </head>
 <body>
-  <h1>THIS IS WORKING</h1>
+<section class="search-menu">
 
-<script src="app.js"></script>
+<label for="commodity">Select commodity</label>
+  <select class="dropdown" id="commodity">
+    <option value="CME_LC1">Cattle</option>
+    <option value="ICE_KC1">Coffee</option>
+    <option value="ICE_CC1">Cocoa beans</option>
+    <option value="CME_HG1">Copper</option>
+    <option value="ICE_CT1">Cotton</option>
+    <option value="CME_C1">Corn</option>
+    <option value="CME_DA1">Dairy</option>
+    <option value="CME_GC1">Gold</option>
+    <option value="CME_O1">Oats</option>
+    <option value="ICE_SB1">Sugar</option>
+    <option value="CME_W1">Wheat</option>
+    <option value="CME_S1">SoyBean</option>
+    <option value="CME_SI1">Silver</option>
+    <option value="CME_RR1">Rice</option>
+  </select>
+
+<button class="search-button">Search</button>
+
+</section>
+
+<script src="public/app.js"></script>
 </body>
 
 </html>
