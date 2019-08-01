@@ -5,9 +5,9 @@ const router = (request, response) => {
 
   if(endpoint === '/'){
     handlers.handleHome(request, response);
-  } else if (endpoint.includes('public')) {
+  } else if (endpoint.startsWith('/public')) {
     handlers.handlePublic(request, response, endpoint);
-  } else if (endpoint.includes('search')) {
+  } else if (endpoint.startsWith('/search')) {
     handlers.handleSearch(request, response, endpoint);
   }
    else {

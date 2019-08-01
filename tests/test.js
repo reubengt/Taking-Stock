@@ -34,7 +34,7 @@ test('is our css file working? - testing public routes ', (t) => {
 
 test('is our front-end request receiving a valid response', (t) =>{
   supertest(router)
-  .get(`/search?q=coffee`)
+  .get(`/search?q=ICE_KC1`)
   .expect(200)
   .expect('Content-type', /json/)
   .end((err,res) => {
