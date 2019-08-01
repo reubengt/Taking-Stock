@@ -41,7 +41,15 @@ const handleSearch = (request, response, endpoint) => {
   console.log(urlObject.query);
   const searchTerm = urlObject.query.q;
   const date = urlObject.query.d;
-  
+  //call myRequest to make request and return response
+  myRequest("api.com", (err, response) => {
+    if(err)
+    console.log(err.message);
+    else {
+    return response;
+    }
+  })
+
   }
 const handleError = (request, response) => {
   response.writeHead(404, { 'content-type': 'text/html'});
