@@ -8,22 +8,29 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <select>
-    <option value="cattle">Cattle</option>
-    <option value="coffee">Coffee</option>
-    <option value="cocoabeans">Cocoa beans</option>
-    <option value="copper">Copper</option>
-    <option value="cotton">Cotton</option>
-    <option value="corn">Corn</option>
-    <option value="dairy">Dairy</option>
-    <option value="gold">Gold</option>
-    <option value="oats">Oats</option>
-    <option value="sugar">Sugar</option>
-    <option value="wheat">Wheat</option>
-    <option value="soybean">SoyBean</option>
-    <option value="silver">Silver</option>
-    <option value="rice">Rice</option>
+<section class="search-menu">
+
+<label for="commodity">Select commodity</label>
+  <select class="dropdown" id="commodity">
+    <option value="CME_LC1">Cattle</option>
+    <option value="ICE_KC1">Coffee</option>
+    <option value="ICE_CC1">Cocoa beans</option>
+    <option value="CME_HG1">Copper</option>
+    <option value="ICE_CT1">Cotton</option>
+    <option value="CME_C1">Corn</option>
+    <option value="CME_DA1">Dairy</option>
+    <option value="CME_GC1">Gold</option>
+    <option value="CME_O1">Oats</option>
+    <option value="ICE_SB1">Sugar</option>
+    <option value="CME_W1">Wheat</option>
+    <option value="CME_S1">SoyBean</option>
+    <option value="CME_SI1">Silver</option>
+    <option value="CME_RR1">Rice</option>
   </select>
+
+<button class="search-button">Search</button>
+
+</section>
 
 <script src="app.js"></script>
 </body>
