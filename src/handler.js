@@ -1,7 +1,8 @@
 let path = require("path");
 let fs = require("fs");
 let url = require("url");
-let myRequest=require('./request.js')
+let myRequest = require('./request.js')
+let filterLatestPrice = require('./filterLatestPrice.js')
 
 const handleHome = (request, response) => {
   const filepath = path.join(__dirname,'..','public','index.html');
@@ -42,15 +43,16 @@ const handleSearch = (requestFromFrontEnd, responseToFrontEnd, endpoint) => {
   console.log(urlObject.query);
   const searchTerm = urlObject.query.q;
   //object with different endpoints for different queries
-  const endpointObj={coffee:'CHRIS/ICE_KC1/data.json'}
-  const apiUrl=`https://www.quandl.com/api/v3/datasets/${endpointObj[searchTerm]}`
+  const apiUrl =`https://www.quandl.com/api/v3/datasets/CHRIS/${searchTerm}/data.json`
   //call myRequest to make request and return response
   myRequest(apiUrl, (err, responseFromAPI) => {
     if(err)
     console.log(err.message);
     else {
+    const latestPrice = filterLatestPrice(JSON.parse(responseFromAPI));
+    console.log(latestPrice);
     responseToFrontEnd.writeHead(200, { 'content-type': 'application/json'});
-    responseToFrontEnd.end(responseFromAPI) ;
+    responseToFrontEnd.end(JSON.stringify(latestPrice));
     }
   })
 
