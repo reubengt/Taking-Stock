@@ -141,11 +141,25 @@
 
 
 
-
-
-
-
-
+.oats,
+.rice,
+.silver,
+.soybean,
+.sugar,
+.wheat,
+.cattle,
+.corn,
+.coffee,
+.cocoa,
+.copper,
+.cotton,
+.dairy,
+.gold {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
 
 .cattle {
   background-image: url(images/cattle-image.jpg);
@@ -178,4 +192,28 @@
 
 .gold {
   background-image: url(images/gold-image.jpg);
+
+
+.oats {
+  background-image: url(images/oats.jpg);
+}
+
+.rice {
+  background-image: url(images/rice.jpg);
+}
+
+.silver {
+  background-image: url(images/silver.jpg);
+}
+
+.soybean {
+  background-image: url(images/soybean.jpg);
+}
+
+.sugar {
+  background-image: url(images/sugar.jpg);
+}
+
+.wheat {
+  background-image: url(images/wheat.jpg);
 }
