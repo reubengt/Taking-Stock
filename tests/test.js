@@ -30,4 +30,16 @@ test('status code is 404', (t) => {
     t.equal(res.statusCode, 404, 'Oh drag! 404 not found.');
     t.end();
   })
-})
+});
+
+test('is our css file working?', (t) => {
+  supertest(router)
+  .get('/public/style.css')
+  .expect(200)
+  .expect('Content-type', /css/)
+  .end((err, res) => {
+    t.error(err);
+    t.equal(res.statusCode, 200);
+    t.end();
+  })
+});
