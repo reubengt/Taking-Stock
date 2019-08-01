@@ -97,6 +97,50 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .oats,
 .rice,
 .silver,
@@ -116,6 +160,39 @@
   background-attachment: fixed;
   background-position: center;
 }
+
+.cattle {
+  background-image: url(images/cattle-image.jpg);
+
+}
+
+.coffee {
+  background-image: url(images/coffee-image.jpg);
+}
+
+.cocoa {
+  background-image: url(images/cocoa-image.jpg);
+}
+
+.copper {
+  background-image: url(images/copper-image.jpg);
+}
+
+.cotton {
+  background-image: url(images/cotton-image.jpg);
+}
+
+.corn {
+  background-image: url(images/corn-image.jpg);
+}
+
+.dairy {
+  background-image: url(images/dairy-image.jpg);
+}
+
+.gold {
+  background-image: url(images/gold-image.jpg);
+
 
 .oats {
   background-image: url(images/oats.jpg);
