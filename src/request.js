@@ -1,7 +1,7 @@
-const http = require("http");
+const https = require("https");
 
 const myRequest = (url, cb) => {
-  http.get(url, (res) => {
+  https.get(url, (res) => {
     let statusCode = res.statusCode
     let body='';
 
@@ -12,6 +12,7 @@ const myRequest = (url, cb) => {
     res.on('end', () => {
       let responseObj = {};
       responseObj.body=JSON.parse(body);
+      console.log(JSON.parse(body))
       responseObj.statusCode=statusCode;
       if(statusCode !== 200)
       {
@@ -19,7 +20,7 @@ const myRequest = (url, cb) => {
       }
       else
       {
-        cb(null, responseObj)
+        cb(null, JSON.stringify(responseObj))
       }
     })
   })

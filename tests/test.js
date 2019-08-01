@@ -39,6 +39,7 @@ test('is our front-end request receiving a valid response', (t) =>{
   .expect('Content-type', /json/)
   .end((err,res) => {
     t.error(err);
+    t.equal(res.statusCode, 200, 'response code should be 200');
     t.end();
   });
 });

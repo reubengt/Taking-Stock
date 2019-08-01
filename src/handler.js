@@ -41,12 +41,16 @@ const handleSearch = (request, response, endpoint) => {
   // console.log('urlObject: ',urlObject);
   console.log(urlObject.query);
   const searchTerm = urlObject.query.q;
+  //object with different endpoints for different queries
+  const endpointObj={coffee:'CHRIS/ICE_KC1/data.json'}
+  const apiUrl=`https://www.quandl.com/api/v3/datasets/${endpointObj[searchTerm]}`
   //call myRequest to make request and return response
-  myRequest("api.com", (err, response) => {
+  myRequest(apiUrl, (err, res) => {
     if(err)
     console.log(err.message);
     else {
-    return response;
+    response.writeHead(200, { 'content-type': 'application/json'});
+    response.end(res) ;
     }
   })
 
