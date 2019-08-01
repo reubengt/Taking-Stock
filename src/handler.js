@@ -36,7 +36,7 @@ const handlePublic = (request, response, endpoint) => {
     }
   });
 }
-const handleSearch = (request, response, endpoint) => {
+const handleSearch = (requestFromFrontEnd, responseToFrontEnd, endpoint) => {
   const urlObject= url.parse(endpoint, true);
   // console.log('urlObject: ',urlObject);
   console.log(urlObject.query);
@@ -45,12 +45,12 @@ const handleSearch = (request, response, endpoint) => {
   const endpointObj={coffee:'CHRIS/ICE_KC1/data.json'}
   const apiUrl=`https://www.quandl.com/api/v3/datasets/${endpointObj[searchTerm]}`
   //call myRequest to make request and return response
-  myRequest(apiUrl, (err, res) => {
+  myRequest(apiUrl, (err, responseFromAPI) => {
     if(err)
     console.log(err.message);
     else {
-    response.writeHead(200, { 'content-type': 'application/json'});
-    response.end(res) ;
+    responseToFrontEnd.writeHead(200, { 'content-type': 'application/json'});
+    responseToFrontEnd.end(responseFromAPI) ;
     }
   })
 

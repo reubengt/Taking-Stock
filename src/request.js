@@ -1,15 +1,15 @@
 const https = require("https");
 
 const myRequest = (url, cb) => {
-  https.get(url, (res) => {
-    let statusCode = res.statusCode
+  https.get(url, (responseFromAPI) => {
+    let statusCode = responseFromAPI.statusCode
     let body='';
 
 
-    res.on('data', (chunk) => {
+    responseFromAPI.on('data', (chunk) => {
       body+=chunk;
     })
-    res.on('end', () => {
+    responseFromAPI.on('end', () => {
       let responseObj = {};
       responseObj.body=JSON.parse(body);
       console.log(JSON.parse(body))
