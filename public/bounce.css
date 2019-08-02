@@ -1,0 +1,65 @@
+/* LOADING ANIMATION */
+iframe {
+  height: 500px;
+  width: 500px;
+}
+
+.coffee-animation {
+  animation: bounce1 2s;
+  animation-direction: alternate-reverse;
+  animation-timing-function: cubic-bezier(.5,0.05,0,.5);
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce1 {
+  from { transform: translate3d(75px, 0, 80px);     }
+  to   { transform: translate3d(100px, 200px, 100px); }
+}
+
+.gold-animation {
+  animation: bounce2 1.2s;
+  animation-direction: alternate-reverse;
+  animation-timing-function: cubic-bezier(.5,0.05,0.2,.5);
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce2 {
+  from { transform: translate3d(75px, 0, 80px);     }
+  to   { transform: translate3d(100px, 200px, 100px); }
+}
+
+.corn-animation {
+  animation: bounce3 1s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.5,0.05,0.7,.5);
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce3 {
+  from { transform: translate3d(75px, 0, 80px);     }
+  to   { transform: translate3d(100px, 200px, 100px); }
+}
+
+.cotton-animation {
+  animation: bounce4 1.6s;
+  animation-direction: alternate-reverse;
+  animation-timing-function: cubic-bezier(.5,0.05,0.5,.5);
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce4 {
+  from { transform: translate3d(75px, 0, 10px);     }
+  to   { transform: translate3d(100px, 200px, 100px); }
+}
+
+.cow-animation {
+  animation: bounce5 1.8s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.5,0.05,0.4,.5);
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce5 {
+  from { transform: translate3d(75px, 0, 200px);     }
+  to   { transform: translate3d(100px, 200px, 100px); }
+}
