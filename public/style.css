@@ -73,10 +73,33 @@ body {
     height: 80vh;
     width: 30vw;
     background-color:#3d5e5e;
+		color:  #c0c0c0;
     display: flex;
+		flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
+}
+
+.dropdown{
+	font-size: 2rem;
+	margin: 1.5rem;
+  font-family: 'Inconsolata', monospace;
+	background-color: #c0c0c0;
+	text-align: center;
+	width: auto;
+	cursor: pointer;
+}
+
+.search-button{
+	font-family: 'Inconsolata', monospace;
+	font-size: 2rem;
+	border-radius: 0.5rem;
+	background-color: #c0c0c0;
+	cursor: pointer;
+}
+.search-button:active {
+  transform: translateY(1px);
 }
 
 .default-image{
@@ -85,7 +108,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-
 }
 
 .price-section {
@@ -99,6 +121,9 @@ body {
 
 .price-span{
     font-size: 4rem;
+		background-color: rgba(192,192,192, 0.5);
+		padding: 0.5rem;
+		border-radius: 0.5rem;
 }
 
  @media only screen and (max-width: 600px) {
@@ -109,10 +134,11 @@ body {
     .title{
       width: 100vw;
     }
-    
+
     .search-menu{
       width: 100vw;
       height: 30vh;
+			flex-direction: column;
     }
 
     .price-section{
@@ -120,26 +146,6 @@ body {
       height: 50vh;
     }
   }
-
-.oats,
-.rice,
-.silver,
-.soybean,
-.sugar,
-.wheat,
-.cattle,
-.corn,
-.coffee,
-.cocoa,
-.copper,
-.cotton,
-.dairy,
-.gold {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-}
 
 .CME_LC1 {
   background-image: url("images/tinified/Cattle-Image.jpg");
