@@ -40,8 +40,6 @@ const handlePublic = (request, response, endpoint) => {
 }
 const handleSearch = (requestFromFrontEnd, responseToFrontEnd, endpoint) => {
   const urlObject= url.parse(endpoint, true);
-  // console.log('urlObject: ',urlObject);
-  console.log(urlObject.query);
   const searchTerm = urlObject.query.q;
   //object with different endpoints for different queries
   const apiUrl =`https://www.quandl.com/api/v3/datasets/CHRIS/${searchTerm}/data.json`
@@ -51,7 +49,6 @@ const handleSearch = (requestFromFrontEnd, responseToFrontEnd, endpoint) => {
     console.log(err.message);
     else {
     const latestPrice = filterLatestPrice(JSON.parse(responseFromAPI));
-    console.log(latestPrice);
     responseToFrontEnd.writeHead(200, { 'content-type': 'application/json'});
     responseToFrontEnd.end(JSON.stringify(latestPrice));
     }

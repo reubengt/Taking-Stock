@@ -11,6 +11,8 @@ const query = e => {
   let priceContainer = document.querySelector('.price-section');
   while (priceContainer.firstChild) {
        priceContainer.removeChild(priceContainer.firstChild)
+
+    priceContainer.classList.add(`${searchValue}`);
       }
 
   let loadingAnimation = document.createElement('iframe');

@@ -81,7 +81,7 @@ body {
 
 .default-image{
   background-image: url("images/tinified/default-market.jpg");
-  background-size: cover;
+  background-size:cover ;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -141,58 +141,58 @@ body {
   background-position: center;
 }
 
-.cattle {
+.CME_LC1 {
   background-image: url("images/tinified/Cattle-Image.jpg");
 }
 
-.coffee {
+.ICE_KC1 {
   background-image: url("images/tinified/Coffee-Image.jpg");
 }
 
-.cocoa {
-  background-image: url("images/tinified/Cocoa-Image.jpg");
+.ICE_CC1 {
+  background-image: url("images/tinified/cocoa.jpg");
 }
 
-.copper {
+.CME_HG1{
   background-image: url("images/tinified/Copper-Image.jpg");
 }
 
-.cotton {
+.ICE_CT1 {
   background-image: url("images/tinified/Cotton-Image.jpg");
 }
 
-.corn {
+.CME_C1 {
   background-image: url("images/tinified/Corn-Image.jpg");
 }
 
-.dairy {
+.CME_DA1 {
   background-image: url("images/tinified/Dairy-Image.jpg");
 }
 
-.gold {
-  background-image: url("images/tinified/Gold-Image.jpg");
+.CME_GC1 {
+  background-image: url("images/tinified/Gold-image.jpg");
 }
 
-.oats {
+.CME_O1{
   background-image: url("images/tinified/Oats-Image.jpg");
 }
 
-.rice {
+.CME_RR1 {
   background-image: url("images/tinified/Rice-Image.jpg");
 }
 
-.silver {
-  background-image: url("images/tinified/Silver-Image.jpg");
-}
-
-.soybean {
-  background-image: url("images/tinified/Soybean-Image.jpg");
-}
-
-.sugar {
+.ICE_SB1 {
   background-image: url("images/tinified/Sugar-Image.jpg");
 }
 
-.wheat {
+.CME_W1 {
   background-image: url("images/tinified/Wheat-Image.jpg");
+}
+
+.CME_S1{
+  background-image: url("images/tinified/Soybean-Image.jpg");
+}
+
+.CME_SI1{
+  background-image: url("images/silver-Image.jpg");
 }
