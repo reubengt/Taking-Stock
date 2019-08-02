@@ -24,7 +24,8 @@ const handlePublic = (request, response, endpoint) => {
     '.html': "text/html",
     '.css':"text/css",
     '.js':"application/javascript",
-    '.ico':"image/x-icon"
+    '.ico':"image/x-icon",
+    '.jpg':"image/jpg"
   }
   const filePath = path.join(__dirname, "..", endpoint)
   fs.readFile(filePath, (error, file) => {
