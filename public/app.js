@@ -7,7 +7,6 @@ let response;
 const query = e => {
   let searchValue = document.querySelector(".dropdown").value; //search query value taken from select dropdown
   let queryUrl = `/search?q=${searchValue}`;
-  
   //clear price container
   let priceContainer = document.querySelector('.price-section');
   while (priceContainer.firstChild) {
@@ -16,13 +15,20 @@ const query = e => {
     priceContainer.classList.add(`${searchValue}`);
       }
 
+  let loadingAnimation = document.createElement('iframe');
+  loadingAnimation.setAttribute("src", "public/bounce.html");
+  priceContainer.appendChild(loadingAnimation);
+  priceContainer.style.backgroundImage = "none";
+  priceContainer.style.backgroundColor = "grey";
+
   xhr.onreadystatechange = () => {
     if(xhr.readyState === 4 && xhr.status === 200) {
-      response = JSON.parse(xhr.responseText);
-      let span = document.createElement('span');
-      span.textContent = response;
-      span.classList.add('price-span');
-      priceContainer.appendChild(span);
+     response = JSON.parse(xhr.responseText);
+     priceContainer.removeChild(loadingAnimation);
+     let span = document.createElement('span');
+    span.textContent = response;
+    span.classList.add('price-span');
+    priceContainer.appendChild(span);
     }
   }
   xhr.open("GET", queryUrl, true);
