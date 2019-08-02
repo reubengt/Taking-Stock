@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -12,8 +12,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -56,12 +56,13 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    font-family: 'Inconsolata', monospace;
 }
 
 .title {
     height: 20vh;
     width: 30vw;
-    background-color: yellow;
+    background-color: #c0c0c0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,29 +72,32 @@ body {
 .search-menu {
     height: 80vh;
     width: 30vw;
-    background-color: blue;
+    background-color:#3d5e5e;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
 }
 
+.default-image{
+  background-image: url("images/tinified/default-market.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
+}
+
 .price-section {
     height: 100vh ;
     width: 70vw;
-    background-color: red;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
 .price-span{
-    width: 100px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 4rem;
 }
 
@@ -115,7 +119,6 @@ body {
       width: 100vw;
       height: 50vh;
     }
-
   }
 
 .oats,
@@ -139,57 +142,57 @@ body {
 }
 
 .cattle {
-  background-image: url(images/Cattle-Image.jpg);
+  background-image: url("images/tinified/Cattle-Image.jpg");
 }
 
 .coffee {
-  background-image: url(images/Coffee-Image.jpg);
+  background-image: url("images/tinified/Coffee-Image.jpg");
 }
 
 .cocoa {
-  background-image: url(images/Cocoa-Image.jpg);
+  background-image: url("images/tinified/Cocoa-Image.jpg");
 }
 
 .copper {
-  background-image: url(images/Copper-Image.jpg);
+  background-image: url("images/tinified/Copper-Image.jpg");
 }
 
 .cotton {
-  background-image: url(images/Cotton-Image.jpg);
+  background-image: url("images/tinified/Cotton-Image.jpg");
 }
 
 .corn {
-  background-image: url(images/Corn-Image.jpg);
+  background-image: url("images/tinified/Corn-Image.jpg");
 }
 
 .dairy {
-  background-image: url(images/Dairy-Image.jpg);
+  background-image: url("images/tinified/Dairy-Image.jpg");
 }
 
 .gold {
-  background-image: url(images/Gold-Image.jpg);
+  background-image: url("images/tinified/Gold-Image.jpg");
 
 
 .oats {
-  background-image: url(images/Oats-Image..jpg);
+  background-image: url("images/tinified/Oats-Image.jpg");
 }
 
 .rice {
-  background-image: url(images/Rice-Image..jpg);
+  background-image: url("images/tinified/Rice-Image.jpg");
 }
 
 .silver {
-  background-image: url(images/Silver-Image..jpg);
+  background-image: url("images/tinified/Silver-Image.jpg");
 }
 
 .soybean {
-  background-image: url(images/Soybean-Image..jpg);
+  background-image: url("images/tinified/Soybean-Image.jpg");
 }
 
 .sugar {
-  background-image: url(images/Sugar-Image..jpg);
+  background-image: url("images/tinified/Sugar-Image.jpg");
 }
 
 .wheat {
-  background-image: url(images/Wheat-Image..jpg);
+  background-image: url("images/tinified/Wheat-Image.jpg");
 }
