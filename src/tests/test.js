@@ -1,6 +1,7 @@
 const test = require('tape');
 const supertest = require('supertest');
-const router = require('../src/router');
+
+const router = require('../router');
 
 test('initialise', (t) => {
   let number = 2;
