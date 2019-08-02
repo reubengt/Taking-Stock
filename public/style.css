@@ -101,6 +101,21 @@ body {
     body {
       background-color: lightblue;
     }
+
+    .title{
+      width: 100vw;
+    }
+    
+    .search-menu{
+      width: 100vw;
+      height: 30vh;
+    }
+
+    .price-section{
+      width: 100vw;
+      height: 50vh;
+    }
+
   }
 
 .oats,
