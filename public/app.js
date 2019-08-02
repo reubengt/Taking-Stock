@@ -12,6 +12,8 @@ const query = e => {
   let priceContainer = document.querySelector('.price-section');
   while (priceContainer.firstChild) {
        priceContainer.removeChild(priceContainer.firstChild)
+
+    priceContainer.classList.add(`${searchValue}`);
       }
 
   xhr.onreadystatechange = () => {
@@ -26,10 +28,7 @@ const query = e => {
   }
   xhr.open("GET", queryUrl, true);
   xhr.send();
-  
+
 
 };
 searchButton.addEventListener('click', query); //query function called on submit
-
-
-
