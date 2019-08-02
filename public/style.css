@@ -56,12 +56,13 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    font-family: 'Inconsolata', monospace;
 }
 
 .title {
     height: 20vh;
     width: 30vw;
-    background-color: yellow;
+    background-color: #c0c0c0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,7 +72,7 @@ body {
 .search-menu {
     height: 80vh;
     width: 30vw;
-    background-color: blue;
+    background-color:#3d5e5e;
     display: flex;
     align-items: center;
     justify-content: center;
