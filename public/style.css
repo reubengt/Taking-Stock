@@ -162,7 +162,7 @@ body {
 }
 
 .ICE_KC1 {
-  background-image: url("images/tinified/Coffee-Image.jpg");
+  background-image: url("images/tinified/Coffee-image.jpg");
 }
 
 .ICE_CC1 {
@@ -170,19 +170,19 @@ body {
 }
 
 .CME_HG1{
-  background-image: url("images/tinified/Copper-Image.jpg");
+  background-image: url("images/tinified/Copper-image.jpg");
 }
 
 .ICE_CT1 {
-  background-image: url("images/tinified/Cotton-Image.jpg");
+  background-image: url("images/tinified/Cotton-image.jpg");
 }
 
 .CME_C1 {
-  background-image: url("images/tinified/Corn-Image.jpg");
+  background-image: url("images/tinified/Corn-image.jpg");
 }
 
 .CME_DA1 {
-  background-image: url("images/tinified/Dairy-Image.jpg");
+  background-image: url("images/tinified/Dairy-image.jpg");
 }
 
 .CME_GC1 {
@@ -210,5 +210,5 @@ body {
 }
 
 .CME_SI1{
-  background-image: url("images/silver-Image.jpg");
+  background-image: url("images/silver-image.jpg");
 }
