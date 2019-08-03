@@ -104,10 +104,11 @@ body {
 
 .default-image{
   background-image: url("images/tinified/default-market.jpg");
-  background-size:cover ;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+}
+
+.loading-background{
+	background-color: #c0c0c0;
+	background-image: none;
 }
 
 .price-section {
@@ -116,7 +117,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+		background-size:cover ;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
 
+}
+
+.loading-animation{
+  width: 100%;
+  height: 50vh;
 }
 
 .price-span{
