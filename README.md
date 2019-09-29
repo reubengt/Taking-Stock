@@ -1,4 +1,4 @@
-# CHIN
+# TAKING STOCK - Week 5 Project - Founders and Coders Summer 2019 cohort
 
 :guitar: **reuben was here**
 
